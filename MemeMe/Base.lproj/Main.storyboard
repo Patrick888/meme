@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yPF-Xy-3cu">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Meme Editor View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MemeEditorViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gjs-mJ-9ch">
+                                <rect key="frame" x="16" y="10" width="343" height="613"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eS4-bK-hm3" userLabel="Bot Tool Bar">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem tag="1" title="Album" width="121" id="IOI-Dw-KES" userLabel="Album">
+                                        <color key="tintColor" red="0.18425239622592926" green="0.42882701754570007" blue="0.87849164009094238" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="openImagePicker:" destination="BYZ-38-t0r" id="WAA-iL-nZo"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem tag="2" title="Camera" id="nuJ-xO-BiO">
+                                        <color key="tintColor" red="0.66196453570000002" green="0.72747004029999995" blue="0.98042500020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="openImagePicker:" destination="BYZ-38-t0r" id="vgY-qb-shU"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="TOP" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8jQ-op-jmM" userLabel="Top Text Field">
+                                <rect key="frame" x="27" y="74" width="321" height="17"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="BOTTOM" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b0d-6f-WJh" userLabel="Bot Text Field">
+                                <rect key="frame" x="27" y="596" width="321" height="17"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="b0d-6f-WJh" secondAttribute="trailing" constant="11" id="CTn-Og-M4b"/>
+                            <constraint firstItem="gjs-mJ-9ch" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="GhK-8p-a0o"/>
+                            <constraint firstItem="b0d-6f-WJh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="11" id="Lo0-RF-aEk"/>
+                            <constraint firstAttribute="trailing" secondItem="eS4-bK-hm3" secondAttribute="trailing" id="Nss-lF-9jf"/>
+                            <constraint firstItem="eS4-bK-hm3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="S7d-2z-cZe"/>
+                            <constraint firstItem="eS4-bK-hm3" firstAttribute="top" secondItem="b0d-6f-WJh" secondAttribute="bottom" constant="10" id="T8a-vK-F7A"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eS4-bK-hm3" secondAttribute="bottom" id="UgP-GH-pFv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gjs-mJ-9ch" secondAttribute="trailing" id="ZJy-4j-hFC"/>
+                            <constraint firstItem="eS4-bK-hm3" firstAttribute="top" secondItem="gjs-mJ-9ch" secondAttribute="bottom" id="apS-Lv-eP7"/>
+                            <constraint firstItem="8jQ-op-jmM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="kVu-22-IcK"/>
+                            <constraint firstItem="gjs-mJ-9ch" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="10" id="qbg-Xr-lDh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8jQ-op-jmM" secondAttribute="trailing" constant="11" id="xu9-yc-SDX"/>
+                            <constraint firstItem="8jQ-op-jmM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="11" id="y65-hl-NZx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ArL-Ga-mRv">
+                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="8WK-l2-Uv3" userLabel="Share">
+                            <color key="tintColor" red="0.18425239622592926" green="0.42882701754570007" blue="0.87849164009094238" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="openShare:" destination="BYZ-38-t0r" id="fu2-Hi-jkl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="albumButton" destination="IOI-Dw-KES" id="1uS-SK-PiE"/>
+                        <outlet property="botTextField" destination="b0d-6f-WJh" id="noW-lW-jE8"/>
+                        <outlet property="botToolBar" destination="eS4-bK-hm3" id="gOG-ho-nb1"/>
+                        <outlet property="cameraButton" destination="nuJ-xO-BiO" id="nnm-r0-AAw"/>
+                        <outlet property="imageView" destination="gjs-mJ-9ch" id="ugh-0b-dB0"/>
+                        <outlet property="shareButton" destination="8WK-l2-Uv3" id="FOh-Wn-yIO"/>
+                        <outlet property="topTextField" destination="8jQ-op-jmM" id="XCM-pI-sgU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1034.4000000000001" y="75.112443778110944"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gob-BR-q0u">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yPF-Xy-3cu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="f90-gZ-TPx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="DG5-Tf-oT8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XZE-8A-aAh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="95.200000000000003" y="75.112443778110944"/>
+        </scene>
+    </scenes>
+</document>
